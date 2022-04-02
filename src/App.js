@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import data from './data'
+//import Frase from '../components/scene/Scene'
+//import React, { count, useState } from "react";
+
+
+
+function Frase(props){
+  //const frases =[];
+  //let i =1;
+  //const fraseShow = frases.map (frase => i++)
+  //alert (frases[i]);
+  //const [count, setCount] = useState(frases.i);
+  return <h3>{data.frases[props.i]}</h3>
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Frase i='0' />
+    <Frase i='1'/>
+    <Frase i='2'/>
+    <Frase i='3'/>
+    </>
   );
 }
 
