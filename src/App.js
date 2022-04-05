@@ -19,7 +19,7 @@ function App(props) {
   return (
     <>
     <button className='botones' onClick={(count >= 0) ? contadorMenos : contadorFinal}>Atras</button>
-    <button className='botones' onClick={(count <= 3) ? contadorMas : contadorInicio}>Siguiente</button>
+    <button className='botones' onClick={(count <= frasesList.length) ? contadorMas : contadorInicio}>Siguiente</button>
     <h3 ><ul>{frasesList}</ul></h3>
     </>
   );
