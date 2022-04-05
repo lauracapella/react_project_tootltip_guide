@@ -2,14 +2,10 @@
 import './App.css';
 //import styled from 'styled-components';
 import React, { count, useState } from "react";
-import useEffect from "react";
-
 import data from "./data"
-
 
 function App(props) {
   const [count, setCount] = useState(0);
-
   const contadorMas = () => setCount(count + 1);
   const contadorMenos = () => setCount(count - 1);
   const frasesList = data.frases.map((frase, index) => 
