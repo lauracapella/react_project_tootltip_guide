@@ -1,29 +1,26 @@
 //import logo from './logo.svg';
 import './App.css';
-import data from './data'
 //import styled from 'styled-components';
-//import Frase from '../components/scene/Scene'
-//import React, { count, useState } from "react";
+import React, { count, useState } from "react";
+import useEffect from "react";
+
+import data from "./data"
 
 
+function App(props) {
+  const [count, setCount] = useState(0);
 
-function Frase(props){
+  const contadorMas = () => setCount(count + 1);
+  const contadorMenos = () => setCount(count - 1);
+  const frasesList = data.frases.map((frase, index) => 
+    <li key={index} className={index===count? 'style__frase_red': 'style__frase'}> {frase}</li> 
+  );
   
-  //const frases =[];
-  //let i =1;
-  //const fraseShow = frases.map (frase => i++)
-  //alert (frases[i]);
-  //const [count, setCount] = useState(frases.i);
-  return <h3 className='style__frase' >{data.frases[props.i]}</h3>
-}
-
-function App() {
   return (
     <>
-    <Frase i='0' />
-    <Frase i='1'/>
-    <Frase i='2'/>
-    <Frase i='3'/>
+    <button className='botones' onClick={contadorMenos}>Atras</button>
+    <button className='botones' onClick={contadorMas}>Siguiente</button>
+    <h3 ><ul>{frasesList}</ul></h3>
     </>
   );
 }
