@@ -1,5 +1,5 @@
 
-.style__frase{
+.style__frase {
   border: solid 1px;
   display:flex;
   justify-content: center;
@@ -19,22 +19,21 @@
   background-color:rgb(254, 157, 157);
 }
 
-.botones{
+.botones {
   width: 46%;
   padding: 20px;
   margin: 2%;
 }
 
+.bckgnd {
+  background-image: url(../img/1.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 * {
   margin: 0;
   padding: 0;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
