@@ -33,6 +33,25 @@
   background-size: cover;
 }
 
+.welcome__wrap {
+  display: flex;
+  justify-content: center;
+  align-content:center;
+  background-color: rgb(252, 252, 235);
+  height: 100vh;
+  width: 100%;
+}
+
+.welcome {
+  width: 400px;
+  justify-content: center;
+  align-content:center;
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
