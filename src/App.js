@@ -1,6 +1,8 @@
 import './App.css';
 import React, { count, useState } from "react";
-import data from "./data"
+//import data from "./data"
+import {frases} from "./datafrase"
+//import imagen from "./img/4.jpg"
 
 function Historia(props) {
   const [count, setCount] = useState(0);
@@ -9,16 +11,23 @@ function Historia(props) {
   const contadorInicio = () => setCount(0);
   const contadorFinal = () => setCount(3);
 
-  const frasesList = data.frases.map((frase, index) => 
-    <li key={frase} className={(index===count) ? 'style__frase_red': 'style__frase'}> {frase}</li> 
+  const frasesList = frases.map((frase, index) => 
+    <li key={frase} className={(index===count) ? 'style__frase_red': 'style__frase'}> {frase.txt}</li> 
   );
-  
+
   return (
-    <div className='bckgnd'>
+    <div style={{
+        backgroundImage: `url(${frases[count].img})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat", 
+        height: '100vh'
+      }}>
     <button className='botones' onClick={(count >= 1) ? contadorMenos : contadorFinal}><h2>ENRERE</h2></button>
     <button className='botones' onClick={(count <= frasesList.length-2) ? contadorMas : contadorInicio}><h2>SEGÜENT</h2></button>
     <h3 ><ul>{frasesList}</ul></h3>
     </div>
+    
   );
 }
 

@@ -26,7 +26,6 @@
 }
 
 .bckgnd {
-  background-image: url(../img/1.jpg);
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -49,8 +48,6 @@
   text-align: center;
   margin-top: 100px;
 }
-
-
 
 * {
   margin: 0;
