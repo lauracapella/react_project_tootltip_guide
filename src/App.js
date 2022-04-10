@@ -2,7 +2,6 @@ import './App.css';
 import React, { count, useState } from "react";
 //import data from "./data"
 import {frases} from "./datafrase"
-//import imagen from "./img/2.jpg"
 
 function Historia(props) {
   const [count, setCount] = useState(0);
@@ -15,18 +14,7 @@ function Historia(props) {
     <li key={frase} className={(index===count) ? 'style__frase_red': 'style__frase'}> {frase.txt}</li> 
   );
 
-
-
-
   return (
-  /*   <div style={{
-        //backgroundImage: `url(${imagen})`,
-        //backgroundImage: `url(${frases[count].img})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat", 
-        height: '100vh'
-      }}> */
     <div className='wrap'>
     <div className='capa1'>  
     <img className='img_bckg' src={require(`${frases[count].img}`)} />
@@ -37,12 +25,10 @@ function Historia(props) {
     <h3 ><ul>{frasesList}</ul></h3>
     </div>
     </div>
-    
   );
 }
 
-function Wellcome (props){
-  let mostrarPagina = true;
+function Wellcome (props) {
 
   return (
     <div class='welcome__wrap'>
@@ -54,12 +40,8 @@ function Wellcome (props){
   );
 }
 
-
-
 function App(props) {
-
   const [mostrarPagina, setMostrarPagina] = useState(false)
-
   const changePage = () => {
     setMostrarPagina(true);
   }
