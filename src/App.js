@@ -2,7 +2,7 @@ import './App.css';
 import React, { count, useState } from "react";
 //import data from "./data"
 import {frases} from "./datafrase"
-//import imagen from "./img/4.jpg"
+//import imagen from "./img/2.jpg"
 
 function Historia(props) {
   const [count, setCount] = useState(0);
@@ -15,17 +15,27 @@ function Historia(props) {
     <li key={frase} className={(index===count) ? 'style__frase_red': 'style__frase'}> {frase.txt}</li> 
   );
 
+
+
+
   return (
-    <div style={{
-        backgroundImage: `url(${frases[count].img})`,
+  /*   <div style={{
+        //backgroundImage: `url(${imagen})`,
+        //backgroundImage: `url(${frases[count].img})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat", 
         height: '100vh'
-      }}>
+      }}> */
+    <div className='wrap'>
+    <div className='capa1'>  
+    <img className='img_bckg' src={require(`${frases[count].img}`)} />
+    </div>
+    <div className='capa2'>
     <button className='botones' onClick={(count >= 1) ? contadorMenos : contadorFinal}><h2>ENRERE</h2></button>
     <button className='botones' onClick={(count <= frasesList.length-2) ? contadorMas : contadorInicio}><h2>SEGÜENT</h2></button>
     <h3 ><ul>{frasesList}</ul></h3>
+    </div>
     </div>
     
   );
